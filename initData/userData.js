@@ -1,0 +1,19 @@
+module.exports = [{
+  accountId:'13622077526',
+  face:'static/img/user/cat.jpeg',
+  nickName:'胖猫咪',
+  sex:'男',
+  age:'22',
+  password:'123456',
+  phone:'136622077526',
+  suggestion:'五星好评'
+},{
+  accountId:'18716751700',
+  face:'static/img/user/cat.jpeg',
+  nickName:'龙龙',
+  sex:'女',
+  age:'22',
+  password:'123456',
+  phone:'18716751700',
+  suggestion:'五星好评'
+}]
