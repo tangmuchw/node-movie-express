@@ -9,12 +9,15 @@ var ScheduleModel = require('../../models/schedule/ScheduleModel')
 /**
  *
  *getSeatsMap
- * @param {*} req => screenId ，scheduleId
- * @param {*} return json Array { screenId: '120105',
+ * @param {*} req => screenId ，scheduleId , startTime
+ * @param {*} return json Array 
+ * { 
+  screenId: '120105',
   screenName: '5号厅',
   seatSum: '20',
   seatsSumRows: 2,
   seats:Array
+}
  * @param {*} next
  */
 function getSeatsMap(req, res, next) {
@@ -22,6 +25,7 @@ function getSeatsMap(req, res, next) {
         var data = req.body;
         var screenId = data.screenId
         var scheduleId = data.scheduleId
+        var startTime = data.startTime
         
         // ScheduleModel.find({
         //     scheduleId:scheduleId
@@ -33,7 +37,8 @@ function getSeatsMap(req, res, next) {
         //     }
         // })
         SeatsModel.find({
-            screenId: screenId
+            screenId: screenId,
+            startTime:startTime
         }).populate({
             path: '_screen',
             select: 'screenId screenName seatSum seatsSumRows seatsSumColumns'

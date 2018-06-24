@@ -96,7 +96,6 @@ function getDateList(req, res, next) {
                                 message: 'SUCCESS',
                             });
                         }
-            
                     })
                 }else{
                     res.send({
@@ -107,8 +106,6 @@ function getDateList(req, res, next) {
                 }
             }
         })
-      
-
     } catch (err) {
         res.send({
             status: statusCode.STATUS_ERROR,
@@ -142,7 +139,6 @@ function getTimeList(req, res, next) {
         var scheduleId = data.scheduleId
         var filmId = data.filmId
         var showDate = data.showDate.substr(0,10)
-        console.log(showDate)
         ScheduleModel.find({
             startTime: {
                  '$regex': showDate
@@ -193,45 +189,6 @@ function getTimeList(req, res, next) {
                
             }
         })
-        // ScheduleModel.find({
-        //     scheduleId: scheduleId
-        // }).populate({
-        //     path: '_film',
-        //     select: 'filmId _id filmName price filmType'
-        // }).populate({
-        //     path: '_screen',
-        //     select: 'screenId _id screenName'
-        // }).exec(function (err, catetories) {
-        //     if (err) {
-        //         console.log(err);
-        //     } else {
-        //         // console.log(catetories)
-        //         var formatArr = []
-        //         catetories.forEach((item) => {
-        //             var json = {}
-        //             var film = item._film
-        //             var screen = item._screen
-        //             // console.log(film)
-        //             json.scheduleId = item.scheduleId
-        //             json.filmId = item.filmId
-        //             json.filmName = film.filmName
-        //             json.filmType = film.filmType
-        //             json.price = film.price
-        //             json.startTime = item.startTime
-        //             json.endTime = item.endTime
-        //             json.screenId = item.screenId
-        //             json.screenMongoId = screen._id
-        //             json.screenName = screen.screenName
-        //             formatArr.push(json)
-        //         })
-
-        //         res.send({
-        //             status: statusCode.STATUS_SUCCESS,
-        //             data: formatArr,
-        //             message: 'SUCCESS'
-        //         })
-        //     }
-        // })
     } catch (err) {
         res.send({
             status: statusCode.STATUS_ERROR,

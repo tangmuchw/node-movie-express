@@ -1,10 +1,7 @@
 'use strict';
 
 var AdminModel = require('../../models/admin/AdminModel')
-// var PowerModel = require('../../models/power/PowerModel')
 var statusCode = require('../../config/statusCode')
-var md5 = require('md5')
-// var CircularJSON = require('circular-json');
 
 function getAdminList(req, res, next) {
     try {

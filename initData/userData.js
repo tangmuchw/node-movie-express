@@ -4,8 +4,8 @@ module.exports = [{
   nickName:'胖猫咪',
   sex:'男',
   age:'22',
-  password:'123456',
-  phone:'136622077526',
+  password:'e10adc3949ba59abbe56e057f20f883e',
+  phone:'13622077526',
   suggestion:'五星好评'
 },{
   accountId:'18716751700',
@@ -13,7 +13,7 @@ module.exports = [{
   nickName:'龙龙',
   sex:'女',
   age:'22',
-  password:'123456',
+  password:'e10adc3949ba59abbe56e057f20f883e',
   phone:'18716751700',
   suggestion:'五星好评'
 }]

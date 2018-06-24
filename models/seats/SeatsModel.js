@@ -15,7 +15,8 @@ const SeatsSchema = new Schema({
     seatId: String,
     rowNum: String,
     columnsNum: String,
-    seatState: String
+    seatState: String,
+    startTime:String
 })
 
 SeatsSchema.index({
@@ -24,7 +25,6 @@ SeatsSchema.index({
 
 const SeatsModel = mongoose.model('seats', SeatsSchema);
 
-var screenId = '120105'
 var screenId = '120105'
 ScreenModel.findOne({
     screenId: screenId
